@@ -10,5 +10,6 @@
         postrotate
                 s6-svc -h /var/run/s6/services/web
         endscript
+	su abc abd
 }
 
