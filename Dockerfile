@@ -1,6 +1,7 @@
 FROM lsiobase/alpine:3.7
+MAINTAINER nick+docker@undergrid.org.uk
 
-# install packages
+#install packages
 RUN \
   echo "**** install build packages ****" && \
   apk add --no-cache \
@@ -21,9 +22,9 @@ RUN \
   echo "**** fix logrotate ****" && \
   sed -i "s#/var/log/messages {}.*# #g" /etc/logrotate.conf
 
-# add local files
+#add local files
 COPY root/ /
 
-# ports and volumes
+#ports and volumes
 EXPOSE 80 443
 VOLUME /config
