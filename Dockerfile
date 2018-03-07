@@ -9,6 +9,7 @@ RUN \
    apache2-ctl \
    apache2-proxy \
    apache2-ssl \
+   apache2-utils \
    curl \
    git \
    logrotate \
